@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>{{ countryName }} ({{ countryCode }})</h2>
+
+  <div class="btn-group mb-3">
+    <button
+      *ngFor="let y of years"
+      class="btn"
+      [ngClass]="y === selectedYear ? 'btn-primary' : 'btn-outline-primary'"
+      (click)="loadHolidays(y)"
+    >
+      {{ y }}
+    </button>
+  </div>
+
+  <div *ngIf="holidays.length > 0; else noHolidays">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Date</th>
+        <th>Holiday Name</th>
+        <th>Local Name</th>
+        <th>Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let h of holidays">
+        <td>{{ h.date | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ h.name }}</td>
+        <td>{{ h.localName }}</td>
+        <td>{{ h.types ? h.types.join(', ') : '-' }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #noHolidays>
+    <p>No holidays found for this year.</p>
+  </ng-template>
+</div>
