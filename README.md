@@ -44,20 +44,6 @@ Powered by the [Nager.Date API](https://date.nager.at/swagger/index.html).
    npm run build
    ```
 
-## 📂 Project Structure
-src/
-├─ app/
-│ ├─ pages/
-│ │ ├─ home/ # Home page with country search & random widget
-│ │ ├─ header/ # Header component
-│ │ └─ country/ # Country page with holidays
-│ ├─ services/
-│ │ └─ country.service.ts
-│ ├─ app.component.ts
-│ └─ app.routes.ts
-└─ environments/
-└─ environment.ts
-
 ## ✅ Code Quality
 - Lint check
 - Auto format
