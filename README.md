@@ -28,9 +28,21 @@ Powered by the [Nager.Date API](https://date.nager.at/swagger/index.html).
    cd country-info
    ```
 2. Install dependencies
+    ```bash
+   npm install
+   ```
 3. Create a .env file in the root directory
+    ```bash
+   NG_APP_API_BASE_URL=https://date.nager.at/api/v3
+   ```
 4. Run the development server
+    ```bash
+   npm start
+   ```
 5. Build for production
+    ```bash
+   npm run build
+   ```
 
 ## 📂 Project Structure
 src/
